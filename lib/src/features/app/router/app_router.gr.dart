@@ -35,10 +35,22 @@ class _$AppRouter extends RootStackRouter {
         child: const EmptyRouterPage(),
       );
     },
+    PostsRouter.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const EmptyRouterPage(),
+      );
+    },
     UsersScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const UsersScreen(),
+      );
+    },
+    PostsScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const PostsScreen(),
       );
     },
   };
@@ -64,7 +76,19 @@ class _$AppRouter extends RootStackRouter {
                   parent: UserRouter.name,
                 )
               ],
-            )
+            ),
+            RouteConfig(
+              PostsRouter.name,
+              path: 'posts',
+              parent: MainTabsRoute.name,
+              children: [
+                RouteConfig(
+                  PostsScreenRoute.name,
+                  path: '',
+                  parent: PostsRouter.name,
+                )
+              ],
+            ),
           ],
         ),
       ];
@@ -109,6 +133,19 @@ class UserRouter extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [EmptyRouterPage]
+class PostsRouter extends PageRouteInfo<void> {
+  const PostsRouter({List<PageRouteInfo>? children})
+      : super(
+          PostsRouter.name,
+          path: 'posts',
+          initialChildren: children,
+        );
+
+  static const String name = 'PostsRouter';
+}
+
+/// generated route for
 /// [UsersScreen]
 class UsersScreenRoute extends PageRouteInfo<void> {
   const UsersScreenRoute()
@@ -118,4 +155,16 @@ class UsersScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'UsersScreenRoute';
+}
+
+/// generated route for
+/// [PostsScreen]
+class PostsScreenRoute extends PageRouteInfo<void> {
+  const PostsScreenRoute()
+      : super(
+          PostsScreenRoute.name,
+          path: '',
+        );
+
+  static const String name = 'PostsScreenRoute';
 }

@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/empty_router_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:test_project_flutter/src/features/main_tabs/main_tabs.dart';
+import 'package:test_project_flutter/src/features/posts/widget/pages/posts.dart';
 import 'package:test_project_flutter/src/features/splash/splash_screen.dart';
 import 'package:test_project_flutter/src/features/users/widget/pages/users.dart';
 
@@ -22,6 +23,17 @@ part 'app_router.gr.dart';
           children: [
             AutoRoute(
               page: UsersScreen,
+              path: '',
+            ),
+          ],
+        ),
+        AutoRoute(
+          path: 'posts',
+          name: 'PostsRouter',
+          page: EmptyRouterPage,
+          children: [
+            AutoRoute(
+              page: PostsScreen,
               path: '',
             ),
           ],

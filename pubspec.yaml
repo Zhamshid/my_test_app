@@ -46,6 +46,7 @@ dependencies:
   freezed_annotation: ^2.2.0
   flutter_bloc: ^8.1.3
   provider: ^6.0.5
+  bloc_concurrency: ^0.2.0
 
   # Utilities
   platform_info: ^3.2.0
