@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:slavit_ou_trade/src/core/widgets/loading.dart';
-import 'package:slavit_ou_trade/src/features/app/router/app_router.dart';
+import 'package:test_project_flutter/src/core/widgets/loading.dart';
+import 'package:test_project_flutter/src/features/app/router/app_router.dart';
 
 typedef CreateRouter = RootStackRouter Function(BuildContext context);
 

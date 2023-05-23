@@ -10,6 +10,13 @@ class UsersScreen extends StatefulWidget {
 class _UsersScreenState extends State<UsersScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 5,
+        title: const Text(
+          'Users',
+        ),
+      ),
+    );
   }
 }

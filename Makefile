@@ -1,7 +1,7 @@
 .PHONY: upgrade all libraries to null-safety versions.
 
 update-null-safety:
-	@echo "*Update to null safety*""
+	@echo "* Update to null safety *"
 	@dart pub upgrade --null-safety
 
 only-upd-libraries:

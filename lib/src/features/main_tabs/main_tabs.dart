@@ -20,6 +20,7 @@ class _MainTabsState extends State<MainTabs> {
   Widget build(BuildContext context) => AutoTabsRouter(
         routes: const [
           UserRouter(),
+          UserRouter(),
         ],
         builder: (context, child, animation) {
           final tabsRouter = AutoTabsRouter.of(context);
@@ -38,6 +39,16 @@ class _MainTabsState extends State<MainTabs> {
                 tabsRouter.setActiveIndex(index);
               },
               items: [
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset(
+                    AppSvgImages.icUser,
+                  ),
+                  activeIcon: SvgPicture.asset(
+                    AppSvgImages.icUser,
+                    color: AppColors.primaryColor,
+                  ),
+                  label: 'Users',
+                ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(
                     AppSvgImages.icUser,
