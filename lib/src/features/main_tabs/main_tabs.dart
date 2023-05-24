@@ -21,6 +21,7 @@ class _MainTabsState extends State<MainTabs> {
         routes: const [
           UserRouter(),
           PostsRouter(),
+          AlbumsRouter(),
         ],
         builder: (context, child, animation) {
           final tabsRouter = AutoTabsRouter.of(context);
@@ -51,13 +52,25 @@ class _MainTabsState extends State<MainTabs> {
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(
-                    AppSvgImages.icUser,
+                    AppSvgImages.icList,
+                    color: const Color(0xFF787D8F),
                   ),
                   activeIcon: SvgPicture.asset(
-                    AppSvgImages.icUser,
+                    AppSvgImages.icList,
                     color: AppColors.primaryColor,
                   ),
                   label: 'Posts',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset(
+                    AppSvgImages.icAlbums,
+                    color: const Color(0xFF787D8F),
+                  ),
+                  activeIcon: SvgPicture.asset(
+                    AppSvgImages.icAlbums,
+                    color: AppColors.primaryColor,
+                  ),
+                  label: 'Albums',
                 ),
               ],
             ),

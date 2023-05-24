@@ -32,6 +32,8 @@ class UsersResponse extends BaseModel<UsersResponse> {
   UsersResponse fromJson(Map<String, dynamic> json) =>
       UsersResponse.fromJson(json);
 
+  Map<String, dynamic> toJson() => _$UsersResponseToJson(this);
+
   @override
   String toString() =>
       'UsersRespose(id:$id , name:$name, username: $username, email: $email, address: $address,phone: $phone, website: $website, company: $company,)';
@@ -58,6 +60,8 @@ class Address extends BaseModel<Address> {
 
   @override
   Address fromJson(Map<String, dynamic> json) => Address.fromJson(json);
+
+  Map<String, dynamic> toJson() => _$AddressToJson(this);
 }
 
 @JsonSerializable()
@@ -71,6 +75,8 @@ class Geo extends BaseModel<Geo> {
 
   @override
   Geo fromJson(Map<String, dynamic> json) => Geo.fromJson(json);
+
+  Map<String, dynamic> toJson() => _$GeoToJson(this);
 }
 
 @JsonSerializable()
@@ -91,4 +97,6 @@ class Company extends BaseModel<Company> {
 
   @override
   Company fromJson(Map<String, dynamic> json) => Company.fromJson(json);
+
+  Map<String, dynamic> toJson() => _$CompanyToJson(this);
 }

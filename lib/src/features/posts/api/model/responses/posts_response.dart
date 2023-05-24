@@ -5,6 +5,7 @@ part 'posts_response.g.dart';
 
 @JsonSerializable()
 class PostsResponse extends BaseModel {
+  @JsonKey(name: 'userId')
   final int? userId;
   final int? id;
   final String? title;

@@ -8,7 +8,7 @@ part of 'posts_response.dart';
 
 PostsResponse _$PostsResponseFromJson(Map<String, dynamic> json) =>
     PostsResponse(
-      userId: json['user_id'] as int?,
+      userId: json['userId'] as int?,
       id: json['id'] as int?,
       title: json['title'] as String?,
       body: json['body'] as String?,
@@ -16,7 +16,7 @@ PostsResponse _$PostsResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$PostsResponseToJson(PostsResponse instance) =>
     <String, dynamic>{
-      'user_id': instance.userId,
+      'userId': instance.userId,
       'id': instance.id,
       'title': instance.title,
       'body': instance.body,

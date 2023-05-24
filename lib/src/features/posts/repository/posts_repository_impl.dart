@@ -9,7 +9,7 @@ class PostsRepositoryImpl implements IPostsRepository {
   PostsRepositoryImpl({required this.client});
 
   @override
-  Future<Result<PostsResponse>> getPosts() => client.execute(
+  Future<Result<List<PostsResponse>>> getPosts() => client.execute(
         route: const PostsApi.getPosts(),
         responseType: PostsResponse(),
       );
