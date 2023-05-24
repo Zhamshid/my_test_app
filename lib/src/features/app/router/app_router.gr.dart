@@ -87,6 +87,16 @@ class _$AppRouter extends RootStackRouter {
         child: const AlbumsScreen(),
       );
     },
+    AlbumsDetailsScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<AlbumsDetailsScreenRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: AlbumsDetailsScreen(
+          key: args.key,
+          albumId: args.albumId,
+        ),
+      );
+    },
   };
 
   @override
@@ -142,7 +152,12 @@ class _$AppRouter extends RootStackRouter {
                   AlbumsScreenRoute.name,
                   path: '',
                   parent: AlbumsRouter.name,
-                )
+                ),
+                RouteConfig(
+                  AlbumsDetailsScreenRoute.name,
+                  path: 'albums_details',
+                  parent: AlbumsRouter.name,
+                ),
               ],
             ),
           ],
@@ -326,4 +341,39 @@ class AlbumsScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AlbumsScreenRoute';
+}
+
+/// generated route for
+/// [AlbumsDetailsScreen]
+class AlbumsDetailsScreenRoute
+    extends PageRouteInfo<AlbumsDetailsScreenRouteArgs> {
+  AlbumsDetailsScreenRoute({
+    Key? key,
+    required int albumId,
+  }) : super(
+          AlbumsDetailsScreenRoute.name,
+          path: 'albums_details',
+          args: AlbumsDetailsScreenRouteArgs(
+            key: key,
+            albumId: albumId,
+          ),
+        );
+
+  static const String name = 'AlbumsDetailsScreenRoute';
+}
+
+class AlbumsDetailsScreenRouteArgs {
+  const AlbumsDetailsScreenRouteArgs({
+    this.key,
+    required this.albumId,
+  });
+
+  final Key? key;
+
+  final int albumId;
+
+  @override
+  String toString() {
+    return 'AlbumsDetailsScreenRouteArgs{key: $key, albumId: $albumId}';
+  }
 }

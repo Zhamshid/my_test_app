@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/empty_router_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:test_project_flutter/src/features/albums/widget/pages/albums.dart';
+import 'package:test_project_flutter/src/features/albums/widget/pages/albums_details_screen.dart';
 import 'package:test_project_flutter/src/features/main_tabs/main_tabs.dart';
 import 'package:test_project_flutter/src/features/posts/api/model/responses/posts_response.dart';
 import 'package:test_project_flutter/src/features/posts/widget/pages/post_details_screen.dart';
@@ -61,6 +62,11 @@ part 'app_router.gr.dart';
             AutoRoute(
               page: AlbumsScreen,
               path: '',
+            ),
+            AutoRoute(
+              page: AlbumsDetailsScreen,
+              path: 'albums_details',
+              name: 'AlbumsDetailsScreenRoute',
             ),
           ],
         ),
